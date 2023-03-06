@@ -178,7 +178,15 @@ function fun() {
     deptc=document.getElementById("deptc").value;
     localStorage.setItem("deptc",deptc);
 
-    
+    col=document.getElementById('color').value;
+    localStorage.setItem("col",col);
+
+    ran=document.getElementById('ran').value;
+    localStorage.setItem("ran",ran);
+
+    fil=document.getElementById('fil').value;
+    localStorage.setItem("fil",fil);
+
     blood_group = document.getElementById('blood-group');
     if(blood_group.value=="-1"){
         dst('req15','select correct bloog group',blood_group);
@@ -324,13 +332,18 @@ function fun() {
         dst('req22','please Enter Acc number',acc);
         return false;
     }else{
-        if(!accreg.test(acc.value)){
-            dst('req22','account number number should be of length 8 to 14',acc);
+        accreg2=/^[0-9]+$/;
+        if(!accreg2.test(acc.value)){
+            dst('req22','account number should be in digit',acc);
             return false;
-        }
-        else{
-            localStorage.setItem("account", acc.value);
-        }
+        }else{
+            if(!accreg.test(acc.value)){
+                dst('req22','account number should be of length 8 to 14',acc);
+                return false;
+            }else{
+                localStorage.setItem("account", acc.value);
+            }
+        } 
     }
     
 
@@ -412,4 +425,8 @@ function fun() {
 
 function reqfun(idelem){
     document.getElementById(idelem).style.display="none";
+}
+
+function funchange(){
+    document.getElementById("ranval").innerHTML=document.getElementById('ran').value;
 }

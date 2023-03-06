@@ -85,6 +85,8 @@
 
         <div id="cardinside">
             <div id="cardinside1">
+                <label for="">favourite color</label>
+                    <input type="color" id="color"><br><br>
                 <div class="feild">
                     <label for="">Blood Group:</label>
                     <input type="text" class="input-text" name="" id="blood-group">    
@@ -114,8 +116,15 @@
                     <input readonly type="text" class="input-text" name="" id="passport-no">
                      
                 </div>
+                <div class="feild">
+                    <label for="">profile</label>
+                    <input type="file" placeholder="passport no" class="input-text"  id="fil">
+                    <span class="req" id="req19"></span>
+                </div>
             </div>
             <div id="cardinside2">
+                <label for="">Skill in domain between 1 to 100</label>
+                <input type="range" id="ran" min="1" max="100" onclick="funchange()"><span id="ranval">51</span><br><br>
                 <label for="cars">Vehicle You use : </label>
 
         <span id="vehicle"></span>

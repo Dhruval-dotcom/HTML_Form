@@ -67,6 +67,13 @@ debit.value = localStorage.getItem('debit');
 passport_no = document.getElementById('passport-no');
 passport_no.value = localStorage.getItem('passport-no');
 
+
+col=document.getElementById('color');
+col.value=localStorage.getItem("col");
+
+ran=document.getElementById('ran');
+ran.value=document.getElementById('ranval').innerHTML=localStorage.getItem("ran");
+
 gstin = document.getElementById('gstin');
 gstin.value = localStorage.getItem('gstin');
 
@@ -96,3 +103,5 @@ telephone_relative.value = localStorage.getItem('telephone-relative');
 
 relation_relative = document.getElementById('relation-relative');
 relation_relative.value = localStorage.getItem('relation-relative');
+
+localStorage.clear();

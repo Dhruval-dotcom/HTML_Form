@@ -109,6 +109,9 @@
             <br><br>
             <div id="cardinside">
                 <div id="cardinside1">
+                    <label for="">favourite color</label>
+                    <input type="color" id="color">
+                    <br><br>
                     <label for="blood">Blood Group: <span id="req2">*</span></label>
                     <select style="background: transparent;border: none;" name="blood" id="blood-group" onblur="reqfun('req15')" >
                         <option value="-1">Select</option>
@@ -150,12 +153,19 @@
 
                     <div class="feild">
                         <label for="">Passport No:</label>
-                        <input type="text" placeholder="passport no" class="input-text"  id="passport-no" onblur="reqfun('req19')"">
+                        <input type="text" placeholder="passport no" class="input-text"  id="passport-no" onblur="reqfun('req19')">
+                        <span class="req" id="req19"></span>
+                    </div>
+                    <div class="feild">
+                        <label for="">profile</label>
+                        <input type="file" placeholder="passport no" class="input-text"  id="fil">
                         <span class="req" id="req19"></span>
                     </div>
                 </div>
 
                 <div id="cardinside2">
+                    <label for="">Skill in domain between 1 to 100</label>
+                    <input type="range" id="ran" min="1" max="100" onclick="funchange()"><span id="ranval">51</span><br><br>
                     <label for="cars">Vehicle You use<span id="req2">*</span>:</label>
                     <select style="background: transparent;border: none;" name="cars" id="vehicle" onblur="reqfun('req13')">
                         <option value="-1">Select</option>
@@ -195,6 +205,11 @@
                         <input type="text" placeholder="PAN no" class="input-text"  id="pan" onblur="reqfun('req24')">
                         <span class="req" id="req24"></span>
                     </div>
+                    <details>
+                        <summary>Simform</summary>
+                        <p>Best place to work <br> certified since 2022</p>
+                      </details>
+                      
                 </div>
             </div>
             <br>
@@ -231,6 +246,5 @@
 </body>
 <script src="index.js"></script>
 <script>
-
 </script>
 </html>
